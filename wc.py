@@ -10,13 +10,13 @@ text_from_file_with_apath = open(sys.argv[1]).read()
 wordlist_after_jieba = jieba.cut(text_from_file_with_apath, cut_all = True)
 wl_space_split = " ".join(wordlist_after_jieba)
 
-img = imread('a.jpg')
+img = imread('b.jpg')
 
  
-my_wordcloud = WordCloud(font_path = './simhei.ttf', 
+my_wordcloud = WordCloud(font_path = './simyou.ttf', 
                         random_state = 30,
                         mask = img,
-                        max_font_size = 100,
+                        max_font_size = 180,
                         stopwords = myStopWords(),
                         background_color="white").generate(wl_space_split)
  
